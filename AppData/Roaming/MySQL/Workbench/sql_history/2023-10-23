@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ENTRY timestamp='01:40:11'>DROP DATABASE IF EXISTS restaurante</ENTRY>
+<ENTRY timestamp='~'>CREATE DATABASE restaurante</ENTRY>
+<ENTRY timestamp='~'>USE restaurante</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.ingrediente_produto</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.registro</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.produto</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.ingrediente</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.comanda</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.pagamento_forma</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.pagamento</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.forma_pagamento</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.registro_horas</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.pagamento_funcionario</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.servicos_gerais</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.garcom</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.funcionario</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.cliente</ENTRY>
+<ENTRY timestamp='~'>DROP TABLE IF EXISTS restaurante.pessoa</ENTRY>

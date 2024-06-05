@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ENTRY timestamp='12:48:52'>DROP DATABASE IF EXISTS vinho_loja</ENTRY>
+<ENTRY timestamp='~'>CREATE DATABASE IF NOT EXISTS vinho_loja</ENTRY>
+<ENTRY timestamp='~'>USE vinho_loja</ENTRY>
+<ENTRY timestamp='~'>CREATE TABLE IF NOT EXISTS produtos(&#x0A;    id INT PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT,&#x0A;    preco FLOAT NOT NULL,&#x0A;    nome VARCHAR(255) NOT NULL,&#x0A;    tipo VARCHAR(255),&#x0A;    nacionalidade VARCHAR(255)&#x0A;)</ENTRY>
+<ENTRY timestamp='~'>CREATE TABLE IF NOT EXISTS usuario(&#x0A;    id INT PRIMARY KEY NOT NULL UNIQUE AUTO_INCREMENT,&#x0A;    email VARCHAR(255) NOT NULL,&#x0A;    nome VARCHAR(255) NOT NULL&#x0A;)</ENTRY>
+<ENTRY timestamp='~'>CREATE TABLE IF NOT EXISTS carrinho(&#x0A;	id_compra INT PRIMARY KEY UNIQUE NOT NULL AUTO_INCREMENT,&#x0A;	id_produto INT,&#x0A;    id_usuario INT,&#x0A;	FOREIGN KEY (id_produto) REFERENCES produtos(id),&#x0A;    FOREIGN KEY (id_usuario) REFERENCES usuario(id)&#x0A;)</ENTRY>

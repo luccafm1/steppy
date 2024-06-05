@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "c:\\Users\\Lucca\\AppData\\Roaming\\Code\\User\\workspaceStorage\\363000a7eabff78ebc5530a3db1fe08a\\redhat.java\\.33f5d0fd631bdd443225ba043e013b49fc12b3ed-audit.json",
+    "files": [
+        {
+            "date": 1699140966192,
+            "name": "c:\\Users\\Lucca\\AppData\\Roaming\\Code\\User\\workspaceStorage\\363000a7eabff78ebc5530a3db1fe08a\\redhat.java\\client.log.2023-11-04",
+            "hash": "bbad4a67437e05fe8346c89886bd7cadfded0e31352ef7d5a729b8caf5ba1937"
+        }
+    ],
+    "hashType": "sha256"
+}

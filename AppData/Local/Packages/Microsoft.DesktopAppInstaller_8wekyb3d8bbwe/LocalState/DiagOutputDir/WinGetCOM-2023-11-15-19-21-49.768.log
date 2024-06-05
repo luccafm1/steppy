@@ -1,0 +1,50 @@
+2023-11-15 19:21:49.843 [CORE] Valid settings file not found. Using default values.
+2023-11-15 19:21:49.844 [CORE] WinGet, version [1.6.3133], activity [{661BBA4C-BA49-4002-870C-ECA6B447A5C7}]
+2023-11-15 19:21:49.845 [CORE] OS: Windows.Desktop v10.0.19045.3570
+2023-11-15 19:21:49.845 [CORE] Command line Args: "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.3133.0_x64__8wekyb3d8bbwe\WindowsPackageManagerServer.exe" -Embedding
+2023-11-15 19:21:49.845 [CORE] Package: Microsoft.DesktopAppInstaller v1.21.3133.0
+2023-11-15 19:21:49.845 [CORE] IsCOMCall:1; Caller: C:\Windows\explorer.exe
+2023-11-15 19:21:49.862 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:49.950 [REPO] Response status: 200
+2023-11-15 19:21:49.950 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:49.966 [REPO] Response status: 200
+2023-11-15 19:21:50.015 [REPO] Creating new SQLite Index with version [Latest] at ':memory:'
+2023-11-15 19:21:50.015 [SQL ] Opening SQLite connection #1: ':memory:' [6, 0]
+2023-11-15 19:21:50.061 [REPO] Reading MSI UpgradeCodes
+2023-11-15 19:21:50.380 [REPO] Reading MSI UpgradeCodes
+2023-11-15 19:21:50.694 [SQL ] Opening SQLite connection #2: ':memory:' [6, 0]
+2023-11-15 19:21:50.707 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:50.724 [REPO] Response status: 200
+2023-11-15 19:21:50.724 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:50.738 [REPO] Response status: 200
+2023-11-15 19:21:50.738 [SQL ] Opening SQLite connection #3: ':memory:' [6, 0]
+2023-11-15 19:21:50.748 [REPO] Finding available package from installed package using system reference search: Query:[none] Include:ProductCode='{09d53cc6-0a7a-3be2-b558-542159936402}'[Exact] Include:UpgradeCode='{c1dfdf69-5945-32f2-a35e-ee94c99c7cf4}'[Exact] Include:NormalizedNameAndPublisher='googlechrome'+'google'[Exact]
+2023-11-15 19:21:50.758 [REPO] Opening SQLite Index for ReadWrite at 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD\installed.db'
+2023-11-15 19:21:50.758 [SQL ] Opening SQLite connection #4: 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD\installed.db' [2, 0]
+2023-11-15 19:21:50.759 [REPO] Opened SQLite Index with version [1.6], last write [2023-09-13 01:06:23.000]
+2023-11-15 19:21:50.763 [REPO] Sending http POST request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/manifestSearch
+2023-11-15 19:21:50.779 [REPO] Response status: 200
+2023-11-15 19:21:50.786 [REPO] Opening pinning index
+2023-11-15 19:21:50.786 [REPO] Opening existing pinning index
+2023-11-15 19:21:50.786 [REPO] Opening SQLite Index for ReadWrite at 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\pinning.db'
+2023-11-15 19:21:50.786 [SQL ] Opening SQLite connection #5: 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\pinning.db' [2, 0]
+2023-11-15 19:21:50.787 [REPO] Opened Pinning Index with version [1.0], last write [2023-09-13 01:06:23.000]
+2023-11-15 19:21:50.803 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:50.818 [REPO] Response status: 200
+2023-11-15 19:21:50.818 [REPO] Sending http GET request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/information
+2023-11-15 19:21:50.834 [REPO] Response status: 200
+2023-11-15 19:21:50.835 [SQL ] Opening SQLite connection #6: ':memory:' [6, 0]
+2023-11-15 19:21:50.840 [REPO] Finding available package from installed package using system reference search: Query:[none] Include:ProductCode='{09d53cc6-0a7a-3be2-b558-542159936402}'[Exact] Include:UpgradeCode='{c1dfdf69-5945-32f2-a35e-ee94c99c7cf4}'[Exact] Include:NormalizedNameAndPublisher='googlechrome'+'google'[Exact]
+2023-11-15 19:21:50.846 [REPO] Opening SQLite Index for ReadWrite at 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD\installed.db'
+2023-11-15 19:21:50.846 [SQL ] Opening SQLite connection #7: 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD\installed.db' [2, 0]
+2023-11-15 19:21:50.847 [REPO] Opened SQLite Index with version [1.6], last write [2023-09-13 01:06:23.000]
+2023-11-15 19:21:50.855 [REPO] Opening SQLite Index for ReadWrite at 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\Microsoft.Winget.Source_8wekyb3d8bbwe\installed.db'
+2023-11-15 19:21:50.855 [SQL ] Opening SQLite connection #8: 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\Microsoft.Winget.Source_8wekyb3d8bbwe\installed.db' [2, 0]
+2023-11-15 19:21:50.856 [REPO] Opened SQLite Index with version [1.6], last write [2023-09-13 01:06:23.000]
+2023-11-15 19:21:50.858 [REPO] Sending http POST request to: https://storeedgefd.dsx.mp.microsoft.com/v9.0/manifestSearch
+2023-11-15 19:21:50.874 [REPO] Response status: 200
+2023-11-15 19:21:50.881 [REPO] Opening pinning index
+2023-11-15 19:21:50.881 [REPO] Opening existing pinning index
+2023-11-15 19:21:50.881 [REPO] Opening SQLite Index for ReadWrite at 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\pinning.db'
+2023-11-15 19:21:50.881 [SQL ] Opening SQLite connection #9: 'C:\Users\Lucca\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\pinning.db' [2, 0]
+2023-11-15 19:21:50.881 [REPO] Opened Pinning Index with version [1.0], last write [2023-09-13 01:06:23.000]

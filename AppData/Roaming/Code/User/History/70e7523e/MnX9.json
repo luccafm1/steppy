@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "python.defaultInterpreterPath": "C:\\Users\\Lucca\\AppData\\Local\\Microsoft\\WindowsApps\\python3.8.exe",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "files.autoSave": "afterDelay",
+    "security.workspace.trust.banner": "never",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.codeLensFontFamily": "Minecraftia",
+    "hexeditor.columnWidth": 16,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside"
+}
