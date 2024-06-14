@@ -19,7 +19,7 @@ import warnings
 ## Extra packages
 from sympy import sin, cos, tan, exp, ln, sqrt, pi, log, atan
 from sympy import oo, zoo
-from sympy.abc import x, n
+from sympy.abc import *
 import os
 
 steps = []
@@ -613,34 +613,38 @@ class Factoring:
 
         return derivative_expr
 
-    def Factor_by_strongest_term_of(self, expression, view=False):
-        if not expression.is_rational_function:
-            return expression
+    # def Factor_by_strongest_term_of(self, expression, view=False):
+    #     if not expression.is_rational_function:
+    #         return expression
 
-        numer, denom = expression.as_numer_denom()
+    #     numer, denom = sp.fraction(expression)
 
-        with sp.evaluate(True):
-            if numer.is_polynomial(self.symbol) and denom.is_polynomial(self.symbol):
-                numer = sp.simplify(numer)
-                denom = sp.simplify(denom)
-                numer_degree = sp.degree(numer, self.symbol)
-                denom_degree = sp.degree(denom, self.symbol)
+    #     with sp.evaluate(True):
+    #         if numer.is_polynomial(self.symbol) and denom.is_polynomial(self.symbol):
+    #             #numer = sp.expand(numer)
+    #             #denom = sp.expand(denom)
 
-                if numer_degree == denom_degree:
+    #             numer_degree = sp.degree(numer, self.symbol)
+    #             denom_degree = sp.degree(denom, self.symbol)
 
-                    numer_coeff = numer.coeff(self.symbol, numer_degree)
-                    denom_coeff = denom.coeff(self.symbol, denom_degree)
+    #             if numer_degree == denom_degree:
 
-                    result = numer_coeff / denom_coeff
+    #                 numer_coeff = numer.coeff(self.symbol, numer_degree)
+    #                 denom_coeff = denom.coeff(self.symbol, denom_degree)
 
-                    if view:
-                        steps.append((
-                            f"{lim(self.symbol, self.point)} \\frac{{{sp.latex(numer)}}}{{{sp.latex(denom)}}} = \\frac{{{sp.latex(numer_coeff)}}}{{{sp.latex(denom_coeff)}}} = {sp.latex(result)}"
-                        ))
+    #                 if numer_coeff == 0 or denom_coeff == 0:
+    #                     return expression
 
-                    return result
+    #                 result = numer_coeff / denom_coeff
 
-            return expression
+    #                 if view:
+    #                     steps.append((
+    #                         f"{lim(self.symbol, self.point)} \\frac{{{sp.latex(numer)}}}{{{sp.latex(denom)}}} = \\frac{{{sp.latex(numer_coeff)}}}{{{sp.latex(denom_coeff)}}} = {sp.latex(result)}"
+    #                     ))
+
+    #                 return result
+
+    #         return expression
 
     def solve(self):
         for i in range(len(self.factoring_algorithms)):
@@ -700,7 +704,7 @@ class TableApproximation:
             f"\\text{{Laterally approach the function to}} \\, {sp.latex(self.point)}"
             ))
         steps.append('\\\\')
-        table_limit(sp.sympify(self.expression), self.symbol, self.point)
+        table_limit(sp.sympify(self.expression), self.symbol, float(self.point))
         steps.append('\\\\')
         steps.append('\\\\')
         steps.append('\\\\')
@@ -752,28 +756,34 @@ class StepByStepLimitSolver:
         print("Unable to find a solution.")
 
 def read_input(input: str):
-    """Extract e, z, z0 from input."""
-    _e_temp, _z_temp, _z0_temp = '', '', ''
+    check = False
 
-    try:
-        _substrings = [
-            input.index('lim of'),
-            input.index('lim of')+len('lim of'),
+    expression = ''
+    temp = ''
 
-            input.index('as'),
-            input.index('as')+len('as'),
+    sym = 0
+    point = ''
+    for i, ch in enumerate(input):
+        temp += ch
+        if "lim of " in temp:
+            expression += ch
+        if "as " in temp:
+            if "as" in expression:
+                expression = ''.join(expression[:-4].split())
+            temp = ''
+            sym = sp.symbols(f'{input[i+1]}')
+        if "tends to " in temp:
+            test_len = len(input) - i
+            for j in range(test_len):
+              point += (input[i+j])
+            point = eval(point)
+            check = True
+            break
 
-            input.index('tends to'),
-            input.index('tends to')+len('tends to')
-        ]
-        _e_temp += input[_substrings[1]:_substrings[2]].strip()
-        _z_temp += input[_substrings[3]:_substrings[4]].strip()
-        _z0_temp += input[_substrings[5]:].strip()
-
-    except:
-        return "Incorrect syntax, no limit found! Correct use: `lim of (expression) as (symbol) tends to (point)`"
-
-    return _e_temp, _z_temp, _z0_temp
+    if not check:
+        print('Incorrect syntax, no limit found! Correct use: `lim of (expression) as (symbol) tends to (point)`')
+        return 1
+    return expression, sym, point
 
 def solve_limit(input: str, debug: bool=False, derive: bool=False):
     '''
@@ -823,5 +833,5 @@ def solve_limit(input: str, debug: bool=False, derive: bool=False):
     solver = StepByStepLimitSolver(expr,sym,point,debug,derive)
     result = solver.solve()
     if result is not None:
-        return steps, sp.sympify(expr), sp.sympify(str(sym)), sp.sympify(point)
+        return steps, sp.sympify(expr), sym, point
 
