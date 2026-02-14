@@ -1,6 +1,6 @@
 # Steppy
 
-steppy is a small web app built with **Flask** that helps compute **calculus limits** using **SymPy** and generates a plot of the target function using **Matplotlib**.
+Steppy is a small web app built with **Flask** that helps compute **calculus limits** using **SymPy** and generates a plot of the target function using **Matplotlib**.
 
 The main page accepts a user input, computes the limit, and returns the result (and generated plot path) via an AJAX request.
 
